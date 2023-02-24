@@ -1,0 +1,12 @@
+.form-container-login {
+  display: flex;
+  margin-left: 30%;
+  margin-top: 10%;
+  background-color: #ffc107;
+  width: 40%;
+  text-align: center;
+}
+
+.btn {
+  display: inline-block;
+}
