@@ -17,8 +17,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route exact path="/events" element={<PhysicalEvent />} />
-      {/* <Route exact path="/events/:eventId" element={<EventDetails />} /> */}
-      <Route exact path="/eventsDetails" element={<EventDetails />} />
+      <Route exact path="/events/:eventId" element={<EventDetails />} />
+      
         <Route
           exact
           path="/events/volunteerRegistration/:eventId"

@@ -21,6 +21,14 @@ const EventDetails = () => {
     fetchData();
   }, [eventId]);
   
+  if (data)
+  {var date = new Date( data.date );
+  var month, day;
+  if ( !!date.valueOf() ) {
+    month = date.toLocaleString('default', { month: 'long' });;
+    day = date.getDate();
+
+}}
 
   return (
     <>
@@ -56,7 +64,7 @@ const EventDetails = () => {
     <div className="overlay" style={{backgroundImage: "url('images/girl.jpg')"}}>
         <div className="container">
             <div align='center' style={{marginTop:'40px'}} className="banner_data">
-                <h1>Educating a girl in the present can be a miracle in future.</h1>
+                <h1>{data.project_name}</h1>
                 <p className="fs-5 mt-3">Event details</p>
             </div>
         </div>
@@ -72,12 +80,13 @@ const EventDetails = () => {
             <div className="col-md-6">
             <div class="card">
       <div class="card-body">
-        <h1>Event Name</h1>
-        <p>Event- Tree</p>
-        <p>Date - 1-Nov</p>
-        <p>Time - 11:00 </p>
-        <p>Location</p>
-        <p>Activivty TYpe </p>
+        <h1>Description</h1>
+        <p>Event- {data.project_name}</p>
+        <p>Date - {day} {month} </p>
+        <p>Time - {data.timing} </p>
+        <p>Hours Required - {data.hours_required} </p>
+        <p>Location - {data.location}</p>
+        <p>Type of Activity - {data.type_of_activity} </p>
         <button >Join Event</button>
       </div>
     </div>
@@ -106,40 +115,7 @@ const EventDetails = () => {
             but you’ll be fully supported if this happens.
 
 			</p>
-            <div className="col-md-6 col-lg-5" data-aos="fade-up" data-aos-delay="200">
-                <div className="row">
-                    <div className="col-6 col-lg-6 mb-4">
-                        <h3 className="h6 fw-bold text-secondary">Address</h3>
-                        <p>Nanhi Kali Foundation, Pune</p>
-                    </div>
-                    <div className="col-6 col-lg-6 mb-4">
-                        <h3 className="h6 fw-bold text-secondary">Phone</h3>
-                        <p>
-                            9630982239 <br/>
-                            
-                        </p>
-                    </div>
-
-                    <div className="col-6 col-lg-6 mb-4">
-                        <h3 className="h6 fw-bold text-secondary">Follow</h3>
-                        <ul className="list-unstyled social-custom">
-                            <li><a href="www.google.com"><span className="icon-instagram"></span></a></li>
-                            <li><a href="www.google.com"><span className="icon-twitter"></span></a></li>
-                            <li><a href="www.google.com"><span className="icon-facebook"></span></a></li>
-                            <li><a href="www.google.com"><span className="icon-linkedin"></span></a></li>
-                            <li><a href="www.google.com"><span className="icon-pinterest"></span></a></li>
-                            <li><a href="www.google.com"><span className="icon-dribbble"></span></a></li>
-                        </ul>
-                    </div>
-                    <div className="col-6 col-lg-6 mb-4">
-                        <h3 className="h6 fw-bold text-secondary">Email</h3>
-                        <p>
-                            <a href="www.google.com">nanhikali@gmail.com</a>
-                        </p>
-                    </div>
-
-                </div>
-            </div>
+            
     </div>
     </div>
 <Footer/>
