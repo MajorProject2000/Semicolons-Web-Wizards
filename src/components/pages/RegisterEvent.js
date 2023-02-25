@@ -69,17 +69,17 @@ const RegisterEvent = () => {
     <img className="banner" src="images/hero_2.jpg" alt="" />
     <div className="overlay">
         <div className="container">
-            <div className="banner_data">
-                <h1>Register an Event Here</h1>
+            <div align='center' style={{marginTop:'40px'}} className="banner_data">
+                <h1>Register your events here</h1>
+                <p className="fs-5 mt-3">Come join us</p>
             </div>
         </div>
     </div>
 </div>
-
       <div className="section">
-        <div className="container">
-          <div className="row mb-5">
-            <div className="col-lg-6" >
+        <div className="container cont1">
+          <div  className="row mb-5">
+            <div className="col-lg-12" data-aos="fade-up">
               <h2 className="heading">Registration Form</h2>
               <p className="text-black-50">
                 Far far away, behind the word mountains, far from the countries
@@ -93,11 +93,11 @@ const RegisterEvent = () => {
           <div className="wrapper">
             <form method="POST" className="form-right">
               <div
-                className="col-md-6 col-lg-6"
-                
+                className="col-md-12 col-lg-12"
+                data-aos="fade-up"
                 data-aos-delay="100"
               >
-                <div className="col-sm-6 mb-3">
+                <div className="col-sm-12 mb-3">
                   <label className="ps-3 fw-bold mb-2">Project Name</label>
                   <input
                     type="text"
@@ -105,13 +105,13 @@ const RegisterEvent = () => {
                     id="name"
                     className="form-control"
                     autoComplete="off"
-                    value={post.project_name}
+                    value={post.name}
                     onChange={(e) =>
                       setPost({ ...post, project_name: e.target.value })
                     }
                   />
                 </div>
-                <div className="col-sm-6 mb-3">
+                <div className="col-sm-12 mb-3">
                   <label for="message" className="ps-3 fw-bold mb-2">
                     Description
                   </label>
@@ -127,7 +127,7 @@ const RegisterEvent = () => {
                     }
                   ></textarea>
                 </div>
-                <div className="col-sm-6 mb-3">
+                <div className="col-sm-12 mb-3">
                   <label className="ps-3 fw-bold mb-2">Location</label>
                   <input
                     type="text"
@@ -141,7 +141,7 @@ const RegisterEvent = () => {
                     }
                   />
                 </div>
-                <div className="col-sm-6 mb-3">
+                <div className="col-sm-12 mb-3">
                   <label className="ps-3 fw-bold mb-2">Date</label>
                   <input
                     type="date"
@@ -153,7 +153,7 @@ const RegisterEvent = () => {
                     onChange={(e) => setPost({ ...post, date: e.target.value })}
                   />
                 </div>
-                <div className="col-sm-6 mb-3">
+                <div className="col-sm-12 mb-3">
                   <label className="ps-3 fw-bold mb-2">Timing</label>
                   <input
                     type="time"
@@ -167,7 +167,7 @@ const RegisterEvent = () => {
                     }
                   />
                 </div>
-                <div className="col-sm-6 mb-3">
+                <div className="col-sm-12 mb-3">
                   <label className="ps-3 fw-bold mb-2">Type of Activity</label>
                   <input
                     type="text"
@@ -181,7 +181,7 @@ const RegisterEvent = () => {
                     }
                   />
                 </div>
-                <div className="col-sm-6 mb-3">
+                <div className="col-sm-12 mb-3">
                   <label className="ps-3 fw-bold mb-2">Hours Required</label>
                   <input
                     type="number"
@@ -195,18 +195,19 @@ const RegisterEvent = () => {
                     }
                   />
                 </div>
-                <div className="col-sm-6 mb-3">
+                <div className="col-sm-12 mb-3">
                   <label className="ps-3 fw-bold mb-2">Upload Photo</label>
+                  <br/>
                   <FileBase64
                     type="file"
-                    
+                    className="form-control"
                     multiple={false}
                     onDone={({ base64 }) =>
                       setPost({ ...post, images: base64 })
                     }
                   />
                 </div>
-                <div className="col-sm-6 mb-3">
+                <div className="col-sm-12 mb-3">
                   <input
                     type="submit"
                     name="signup"

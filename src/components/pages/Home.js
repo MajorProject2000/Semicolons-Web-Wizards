@@ -21,7 +21,7 @@ const Home = () => {
             <div className="banner_data">
                 <h1>Engage yourself <br /> in event <br />Volunteering</h1>
                 <p className="fs-5 mt-3">Open Your Heart To Those In Need Indoor. Outdoor. Remote.</p>
-                <a href="">Register <i className="fas fa-caret-right"></i></a>
+                <a href="www.google.com">Register <i className="fas fa-caret-right"></i></a>
             </div>
         </div>
     </div>
@@ -95,7 +95,7 @@ const Home = () => {
         <p className="fs-3 event">Event Name</p>
         <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
         <div className="learn">
-          <a href="">Learn more </a>
+          <a href="www.google.com">Learn more </a>
         </div>
       </div>
     </div>
