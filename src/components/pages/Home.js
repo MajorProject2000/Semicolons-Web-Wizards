@@ -21,7 +21,7 @@ const Home = () => {
             <div className="banner_data">
                 <h1>Engage yourself <br /> in event <br />Volunteering</h1>
                 <p className="fs-5 mt-3">Open Your Heart To Those In Need Indoor. Outdoor. Remote.</p>
-                <a href="www.google.com">Register <i className="fas fa-caret-right"></i></a>
+                {/* <a href="www.google.com">Register <i className="fas fa-caret-right"></i></a> */}
             </div>
         </div>
     </div>
@@ -144,7 +144,7 @@ const Home = () => {
   <div className="overlay1">
       <div className="container">
           <div className="banner1_data">
-              <h1>Make a difference</h1>
+              <h1 className="mb-3">Make a difference</h1>
             <Link to="/physicalEvent" className="btn_2">Become Volunteer</Link>
             </div>
       </div>

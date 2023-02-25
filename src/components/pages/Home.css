@@ -203,11 +203,13 @@ i{
   color:white;
   background-color: transparent;
   border: 1.5px solid white;
-  padding: 10px;
+  padding: 20px;
   font-size: 20px;
-  width: 260px;
+  width: 300px;
   margin-top: 30px;
   border-radius: 30px;
+  text-decoration: none;
+  transition: 0.4s;
 }
 
 .btn_2:hover{

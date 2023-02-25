@@ -36,7 +36,7 @@ const EventCard = (props) => {
         <div className="card border-0 mb-4 card1">
           <Link to={`/events/${props.id}`}>
             <img
-              style={{ padding: "0px" }}
+              style={{ padding: "0px",width:'100%',height:'200px' }}
               className="card-img-top"
             
               src={props.images}
@@ -46,26 +46,29 @@ const EventCard = (props) => {
           <div className="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
            {month}<span className="d-block">{day}</span>
           </div>
-          <h5 className="font-weight-medium mt-3 text-center">
+          <h5 style={{color:'coral'}} className="font-weight-medium mt-3 text-center">
             <Link
               to={`/events/${props.id}`}
-              className="text-decoration-none link"
+              className="text-decoration-none link project_name" style={{color:'coral',fontWeight:'700'}}
             >
               {props.project_name}
       
             </Link>
           </h5>
-          <p className="mt-3">
+          <p className="mt-3" style={{color:'#59886b',fontWeight:'700'}}>
+
             {props.location}
             
           </p>
           <Link
+            style={{color:'grey'}}
             to={`/events/${props.id}`}
-            className="text-decoration-none linking text-themecolor mt-2"
+            className="text-decoration-none mt-2"
           >
             View Event
           </Link>
           <Link
+            style={{color:'grey'}}
             to={
               isLoggedIn
                 ? `/events/volunteerRegistration/${props.id}`

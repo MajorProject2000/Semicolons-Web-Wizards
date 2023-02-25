@@ -42,14 +42,15 @@ const PhysicalEvent = () => {
           <div className="row">
             <div className="blog-home2 py-5">
               <div className="container">
-                <div className="row justify-content-center">
-                  <div className="col-md-8 text-center">
-                    <h2 className="my-3">Events</h2>
-                    <h5 className="subtitle font-weight-normal">
-                      Volunteer for our events
-                    </h5>
-                  </div>
-                </div>
+              <div className="row">
+    <div align="center" className="col-md-12">
+      <div className="data">
+        <p className="fs-2">
+          Event Categories
+        </p>
+    </div>
+    </div>
+  </div>
                 <div className="row mt-4">
                   {data &&
                     data.map((item) => (
