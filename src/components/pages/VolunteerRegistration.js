@@ -3,6 +3,42 @@ import Layout from "./Layout";
 //import "./VolunteerRegistration.css";
 
 const VolunteerRegistration = () => {
+  const [post, setPost] = useState({
+    name: "" , email: "", bu: "", phone: "",project_name: "",project_id: "",empid: "",gender: ""
+  });
+  const PostData = async (e) => {
+    e.preventDefault();
+
+    const {
+      name , email, bu, phone,project_name,project_id,empid,gender
+    } = post;
+
+    const res = await fetch("/v/project_invite", {
+      method: "POST",
+
+      headers: {
+        "Content-Type": "application/json",
+      },
+
+      body: JSON.stringify({
+        name , email, bu, phone,project_name,project_id,empid,gender
+      }),
+    });
+
+    const data = await res.json();
+
+    if (data.status === 422 || !data) {
+      window.alert("Invalid Registration");
+
+      console.log("Invalid Registration");
+    } else {
+      window.alert("Volunteer Registered Successful");
+
+      console.log("Volunteer Registered Successful");
+
+      //history.pushState("")
+    }
+  };
   return (
     <>
       <Layout />

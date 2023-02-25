@@ -22,6 +22,14 @@ const EventCard = (props) => {
     fetchData();
   }, []);
 
+  var date = new Date( props.date );
+  var month, day;
+  if ( !!date.valueOf() ) {
+    month = date.toLocaleString('default', { month: 'short' });;
+    day = date.getDate();
+
+}
+
   return (
     <>
       <div className="col-md-4 on-hover">
@@ -30,26 +38,26 @@ const EventCard = (props) => {
             <img
               style={{ padding: "0px" }}
               className="card-img-top"
-              src="images/tree.jpg"
-              //   src={props.images}
+            
+              src={props.images}
               alt="wrappixel kit"
             />
           </Link>
           <div className="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
-            Oct<span className="d-block">23</span>
+           {month}<span className="d-block">{day}</span>
           </div>
           <h5 className="font-weight-medium mt-3 text-center">
             <Link
               to={`/events/${props.id}`}
               className="text-decoration-none link"
             >
-              {/* {props.project_name} */}
-              Tree Plantation
+              {props.project_name}
+      
             </Link>
           </h5>
           <p className="mt-3">
-            {/* {props.location} */}
-            Business Park, Opp. Corns Sam Restaurant, New Yoark, US
+            {props.location}
+            
           </p>
           <Link
             to={`/events/${props.id}`}

@@ -13,7 +13,7 @@ const PhysicalEvent = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await fetch("/getallProjects");
+      const response = await fetch("/v/project_view_all");
       const jsonData = await response.json();
       if (response.ok) {
         setData(jsonData);

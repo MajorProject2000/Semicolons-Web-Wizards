@@ -29,7 +29,7 @@ const Contact = () => {
 
     const { name, email, msg } = contactDetails;
 
-    const res = await fetch("/api/v1/contactDetails", {
+    const res = await fetch("/contactUs/contactDetails", {
       method: "POST",
 
       headers: {

@@ -28,7 +28,7 @@ const RegisterEvent = () => {
       images,
     } = post;
 
-    const res = await fetch("/uploadphoto", {
+    const res = await fetch("/addProject", {
       method: "POST",
 
       headers: {
@@ -113,7 +113,7 @@ const RegisterEvent = () => {
                     id="name"
                     className="form-control"
                     autoComplete="off"
-                    value={post.name}
+                    value={post.project_name}
                     onChange={(e) =>
                       setPost({ ...post, project_name: e.target.value })
                     }
@@ -183,7 +183,7 @@ const RegisterEvent = () => {
                     id="type_of_activity"
                     className="form-control"
                     autoComplete="off"
-                    value={post.timing}
+                    value={post.type_of_activity}
                     onChange={(e) =>
                       setPost({ ...post, type_of_activity: e.target.value })
                     }
@@ -207,7 +207,7 @@ const RegisterEvent = () => {
                   <label className="ps-3 fw-bold mb-2">Upload Photo</label>
                   <FileBase64
                     type="file"
-                    className="form-control"
+                    
                     multiple={false}
                     onDone={({ base64 }) =>
                       setPost({ ...post, images: base64 })
