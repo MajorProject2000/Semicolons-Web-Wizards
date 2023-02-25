@@ -2,3 +2,27 @@
   float: right;
   margin-top: -40px;
 }
+
+.btn_login{
+  background-color: transparent;
+  color: coral;
+  border: 1.5px solid coral;
+  margin-top: 5px;
+  padding: 1px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 8px;
+  padding-bottom: 5px;
+}
+
+.btn_login:hover{
+  background-color: coral;
+  color: #f1f1f1;
+  border: 1.5px solid coral;
+  margin-top: 5px;
+  padding: 1px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 8px;
+  padding-bottom: 5px;
+}

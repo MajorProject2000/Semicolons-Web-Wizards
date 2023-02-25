@@ -65,29 +65,21 @@ const RegisterEvent = () => {
   return (
     <>
       <Layout />
-      <div className="hero overlay registerEventOverlay">
+      <div className="wrapper1">
+    <img className="banner" src="images/hero_2.jpg" alt="" />
+    <div className="overlay">
         <div className="container">
-          <div className="row align-items-center justify-content-center">
-            <div className="col-lg-6 text-center">
-              <h1 className="heading text-white mb-2" data-aos="fade-up">
-                Register an Event Here
-              </h1>
-              <p
-                data-aos="fade-up"
-                className=" mb-5 text-white lead text-white-50"
-              >
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum
-                minima dignissimos hic mollitia eius et quam ducimus maiores eos
-                magni.
-              </p>
+            <div className="banner_data">
+                <h1>Register an Event Here</h1>
             </div>
-          </div>
         </div>
-      </div>
+    </div>
+</div>
+
       <div className="section">
         <div className="container">
           <div className="row mb-5">
-            <div className="col-lg-6" data-aos="fade-up">
+            <div className="col-lg-6" >
               <h2 className="heading">Registration Form</h2>
               <p className="text-black-50">
                 Far far away, behind the word mountains, far from the countries
@@ -102,7 +94,7 @@ const RegisterEvent = () => {
             <form method="POST" className="form-right">
               <div
                 className="col-md-6 col-lg-6"
-                data-aos="fade-up"
+                
                 data-aos-delay="100"
               >
                 <div className="col-sm-6 mb-3">

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "./Layout.css";
 const Layout = () => {
   const [isLoading, setIsLoading] = useState(true);
-  const [data, setData] = useState(null);
+  const [data, setData] = useState({ jwtoken: "" });
   useEffect(() => {
     const fetchData = async () => {
       const response = await fetch(`/getcookie`);
@@ -33,93 +33,42 @@ const Layout = () => {
 
   return (
     <>
-      <div className="site-mobile-menu site-navbar-target">
-        <div className="site-mobile-menu-header">
-          <div className="site-mobile-menu-close">
-            <span className="icofont-close js-menu-toggle"></span>
-          </div>
-        </div>
-        <div className="site-mobile-menu-body"></div>
-      </div>
-
-      <nav className="site-nav">
-        <div className="container">
-          <div className="menu-bg-wrap">
-            <div className="site-navigation">
-              <div className="row g-0 align-items-center">
-                <div className="col-2">
-                  <a
-                    href="https://www.persistent.com/"
-                    className="logo m-0 float-start text-white"
-                  >
-                    Persistent
-                  </a>
-                </div>
-                <div className="col-8 text-center">
-                  <ul className="js-clone-nav d-none d-lg-inline-block text-start site-menu mx-auto">
-                    <li className="active">
-                      <Link to="/">Home</Link>
-                    </li>
-                    <li className="active">
-                      <Link to="/events">Events</Link>
-                    </li>
-                    <li className="active">
-                      <Link to="/registerEvent">RegisterEvent</Link>
-                    </li>
-                    {/* <li className="has-children">
-                      <a href="/">Events</a>
-                      <ul className="dropdown">
-                        <li>
-                          <Link to="/physicalEvent">Physical</Link>
-                        </li>
-                        <li>
-                          <Link to="/virtualEvent">Virtual</Link>
-                        </li>
-                      </ul>
-                    </li> */}
-                    <li>
-                      <Link to="/about">About</Link>
-                    </li>
-                    <li>
-                      <Link to="/contact">Contact</Link>
-                    </li>
-                  </ul>
-                </div>
-                <div classNameName="col-2 text-end">
-                  <a
-                    href="https://www.youtube.com/watch?v=oEHHjs1UVXQ&list=PL4cUxeGkcC9iJ_KkrkBZWZRHVwnzLIoUE&index=6"
-                    className="burger ms-auto float-end site-menu-toggle js-menu-toggle d-inline-block d-lg-none light"
-                  >
-                    <span></span>
-                  </a>
-
-                  {!isLoading && data.jwtoken ? (
-                    <button
-                      type="button"
-                      style={{ color: "black" }}
-                      className="call-us d-flex align-items-center btn btn-sm btn-warning pull-right registerButton"
-                      onClick={LogoutHandler}
-                    >
-                      Logout
-                    </button>
-                  ) : (
-                    <Link to="/login">
-                      <button
-                        type="button"
-                        className="call-us d-flex align-items-center btn btn-sm btn-warning pull-right registerButton"
-                      >
-                        <Link style={{ color: "black" }} to="/login">
-                          Login/Register
-                        </Link>
-                      </button>
-                    </Link>
-                  )}
-                </div>
-              </div>
-            </div>
+      <nav style={{backgroundColor: 'transparent',zIndex: '1'}} className="navbar navbar-expand-lg navbar-light">
+        <div className="container-fluid">
+          <a className="navbar-brand" href="www.youtube.com" style={{color: 'white',fontWeight: '500'}}>
+            <img style={{paddingRight:'10px'}} src="https://www.persistent.com/wp-content/themes/persistent/dist/images/persistent-logo-favicon-icon_83d9bf54.ico" alt="" width="30" height="24" className="d-inline-block align-text-top" />
+            Persistent
+          </a>
+          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span className="navbar-toggler-icon"></span>
+          </button>
+          <div className="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul className="navbar-nav me-auto mb-2 mb-lg-0 ">
+              <li className="nav-item">
+                <Link style={{color: 'coral'}} className="nav-link active" aria-current="page" to="/">Home</Link>
+              </li>
+              <li className="nav-item">
+                <Link style={{color: 'coral'}}  className="nav-link active" aria-current="page" to="/events">Event</Link>
+              </li>
+              <li className="nav-item">
+                <Link style={{color: 'coral'}}  className="nav-link active" aria-current="page" to="/registerEvent">RegisterEvent</Link>
+              </li>
+              <li className="nav-item">
+                <Link style={{color: 'coral'}}  className="nav-link active" aria-current="page" to="/about">About us</Link>
+              </li>
+              <li className="nav-item">
+                <Link style={{color: 'coral'}}  className="nav-link active" aria-current="page" to="/contact">Contact us</Link>
+              </li>
+              <li className="nav-item">
+                {!isLoading && data.jwtoken ? <button className="btn_login" onClick={LogoutHandler}>Logout</button> : <Link style={{color: 'coral'}}  className="nav-link active" aria-current="page" to="/login">Login</Link>}
+              </li>
+             
+            </ul>
           </div>
         </div>
       </nav>
+
+      
     </>
   );
 };

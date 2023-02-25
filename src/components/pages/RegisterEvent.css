@@ -1,3 +1,232 @@
 .registerEventOverlay {
   background-image: url("images/katt-yukawa-K0E6E0a0R3A-unsplash.jpg");
 }
+.banner{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+.overlay{
+  position: relative;
+  background: rgba(0, 0, 0, 0.668);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.banner_data h1{
+  color: white;
+  /* text-align: center; */
+}
+
+.banner_data p{
+  color: white;
+  font-weight: 200;
+}
+.banner_data h1{
+  font-size: 53px;
+}
+.banner_data h1{
+  font-size: 53px;
+}
+
+.btns{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}  
+
+.btns button{
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.nav-item{
+  padding-right: 20px;
+}
+
+.data p{
+  text-align: center;
+  /* border-bottom: 4px solid #ffc107; */
+  color: #59886b;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+i{
+  color: gray;
+  margin-bottom: 15px;
+}
+.service_header{
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.service_desc{
+  color: grey;
+}
+
+.data1 p{
+  text-align: center;
+  border-bottom: 4px solid #ffc107;
+  /* letter-spacing: 2px; */
+  width: 300px;
+}
+
+.data2{
+ 
+      text-align: center;
+      border-bottom: 4px solid #ffc107;
+      /* letter-spacing: 2px; */
+      width: 200px;
+ 
+}
+
+.contact{
+  padding: 300px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: rgb(248, 248, 248);
+  width: 100%;
+
+}
+.footer{
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  background-color: #ffc107;
+  padding-top: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer_data{
+  color: #6b5000;
+}
+.btn1 button{
+  background-color: transparent;
+  color: #ffc107;
+  width: 100px;
+  padding-top: 2px;
+  padding-bottom: 3px;
+  border: 1.5px solid #ffc107;
+  border-radius: 10px;   
+  transition: 0.3s;
+}
+
+.btn1 button:hover{
+  background-color: #ffc107;
+  color: #ffff;
+}
+
+.learn a{
+  color: #59886b;
+  text-decoration: none;
+}
+
+.event{
+  color: #59886b;
+  font-weight: 400;
+}
+
+.card{
+  height: 100%;
+}
+
+.btn1{
+  color: #59886b;
+  background-color: transparent;
+  border: 1.5px solid #59886b;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 10px;
+  transition:  0.3s;
+}
+
+.btn1:hover{
+  color: #f1f1f1;
+  background-color: #59886b;
+  border: 1.5px solid #59886b;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 10px;
+  transition: all 0.3s;
+}
+
+.about_content{
+  color: gray;
+}
+
+.about_data{
+  margin-left: 20px;
+  padding-left: 30px;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  border-left: 6px solid #ffc107;
+}
+
+.about_data p{
+  color: #59886b;
+}
+
+
+
+.banner1{
+  width: 100%;
+  height: 60%;
+  position: absolute;
+}
+.overlay1{
+  position: relative;
+  background: rgba(0, 0, 0, 0.668);
+  width: 100%;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.banner1_data{
+  color: white;
+  text-align: center;
+}
+.banner1_data h1{
+  font-size: 53px;
+  color: white;
+}
+.banner1_data h1{
+  font-size: 53px;
+}
+
+.btn_2{
+  color:white;
+  background-color: transparent;
+  border: 1.5px solid white;
+  padding: 10px;
+  font-size: 20px;
+  width: 260px;
+  margin-top: 30px;
+  border-radius: 30px;
+}
+
+.btn_2:hover{
+  color:black;
+  background-color: white;
+  border: 1.5px solid white;
+  padding: 10px;
+  font-size: 20px;
+  width: 260px;
+  margin-top: 10px;
+  border-radius: 30px;
+}
+
+.nav-link{
+  color: white;
+}
+.wrapper1{
+  margin-top: -60px;
+}

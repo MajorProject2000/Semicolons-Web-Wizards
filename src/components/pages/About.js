@@ -12,25 +12,16 @@ const About = () => {
   return (
     <>
       <Layout />
-      <div className="hero overlay aboutOverlay">
+      <div className="wrapper1">
+    <img className="banner" src="images/hero_2.jpg" alt="" />
+    <div className="overlay">
         <div className="container">
-          <div className="row align-items-center justify-content-center">
-            <div className="col-lg-6 text-center">
-              <h1 className="heading text-white mb-2" data-aos="fade-up">
-                About Us
-              </h1>
-              <p
-                data-aos="fade-up"
-                className=" mb-5 text-white lead text-white-50"
-              >
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum
-                minima dignissimos hic mollitia eius et quam ducimus maiores eos
-                magni.
-              </p>
+            <div className="banner_data">
+                <h1>Who we are....</h1>
             </div>
-          </div>
         </div>
-      </div>
+    </div>
+</div>
 
       <div className="section sec-about">
         <div className="container">

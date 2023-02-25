@@ -13,7 +13,7 @@ const PhysicalEvent = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await fetch("/v/project_view_all");
+      const response = await fetch("/getallProjects");
       const jsonData = await response.json();
       if (response.ok) {
         setData(jsonData);
@@ -25,22 +25,17 @@ const PhysicalEvent = () => {
   return (
     <>
       <Layout />
-      <div className="hero overlay physicalOverlay">
+      <div className="wrapper1">
+    <img className="banner" src="images/hero_2.jpg" alt="" />
+    <div className="overlay">
         <div className="container">
-          <div className="row align-items-center">
-            <div className="col-lg-6 text-center mx-auto">
-              <span className="subheading-white text-white mb-5">Events</span>
-
-              <p
-                data-aos="fade-up"
-                className=" mb-5 text-white lead text-white-50"
-              >
-                Come join us.
-              </p>
+            <div align='center' style={{marginTop:'40px'}} className="banner_data">
+                <h1>Events</h1>
+                <p className="fs-5 mt-3">Come join us</p>
             </div>
-          </div>
         </div>
-      </div>
+    </div>
+</div>
 
       <div className="section bg-light">
         <div className="container">
