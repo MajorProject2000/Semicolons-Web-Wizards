@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import Footer from "../Footer"
 
 import { useParams } from "react-router-dom";
@@ -8,6 +9,27 @@ const EventDetails = () => {
   const { eventId } = useParams();
   const [data, setData] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
+
+  const [token, setToken] = useState({ jwtoken: "" });
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  useEffect(() => {
+    const fetchData = async () => {
+      const response = await fetch(`/getcookie`);
+      const jsonData = await response.json();
+      console.log(`data ${jsonData.jwtoken}`);
+      if (response.ok) {
+        if (jsonData.jwtoken) {
+          setData({ jwtoken: jsonData.jwtoken });
+          setIsLoggedIn(true);
+        } else {
+          setData({ jwtoken: "" });
+          setIsLoggedIn(false);
+        }
+      }
+    };
+    fetchData();
+  }, []);
+
 
   useEffect(() => {
     const fetchData = async () => {
@@ -33,31 +55,7 @@ const EventDetails = () => {
   return (
     <>
        { !isLoading && <> 
-      {/* <div className="site-mobile-menu site-navbar-target">
-		<div className="site-mobile-menu-header">
-			<div className="site-mobile-menu-close">
-				<span className="icofont-close js-menu-toggle"></span>
-			</div>
-		</div>
-		<div className="site-mobile-menu-body"></div>
-	</div>
-
-	<Layout/>
-
-	<div className="hero overlay" style="background-image: url('images/girl.jpg')">
-		<div className="container">
-			<div className="row align-items-center justify-content-between">
-				<div className="col-lg-6 text-left">
-					
-					<h1 className="heading text-white mb-2" data-aos="fade-up">Educating a girl in the present can be a miracle in future.<h3><span className="subheading-white text-white mb-4" data-aos="fade-up">Event details</span></h3></h1>
-					
-					
-					
-				</div>
-
-			</div>
-		</div>
-	</div> */}
+      
   <Layout />
       <div className="wrapper1">
     <img className="banner" src="images/hero_2.jpg" alt="" />
@@ -74,7 +72,7 @@ const EventDetails = () => {
 		
         <div className="container row">
             <div className="col-md-6 mt-3">
-            <img style={{width:'100%',height:'50vh'}} src="https://i.pinimg.com/736x/db/f4/57/dbf4579a721e576c8d5946434fe11da6.jpg" />
+            <img style={{width:'100%',height:'50vh'}} src={data.images} />
             </div>
 
             <div className="col-md-6">
@@ -87,7 +85,12 @@ const EventDetails = () => {
         <p>Hours Required - {data.hours_required} </p>
         <p>Location - {data.location}</p>
         <p>Type of Activity - {data.type_of_activity} </p>
-        <button >Join Event</button>
+<Link to={
+              isLoggedIn
+                ? `/events/volunteerRegistration/${data._id}`
+                : "/login"
+            }><button >Join Event</button></Link>
+        
       </div>
     </div>
             </div>
